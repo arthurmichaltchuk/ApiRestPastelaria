@@ -1,32 +1,47 @@
-### Verbo POST - Adicionar
-POST http://localhost:8000/cliente/ HTTP/1.1
-content-type: application/json
-
-{
-  "nome": "Cliente",
-  "cpf": "12345678910",
-  "telefone": "49988234567",
-  "compra_fiado": 1,
-  "dia_fiado": 16,
-  "senha": "abcbolinhas"
-}
-
-### Verbo GET - Listar
+### Verbo GET – listar
 GET http://localhost:8000/cliente/ HTTP/1.1
+x-token: abcBolinhasToken
+x-key: abcBolinhasKey
 
+### Verbo GET – listar todos
+curl -X 'GET' \
+    'http://localhost:8000/funcionario/' \
+    -H 'accept: application/json' \
+    -H 'x-token: abcBolinhasToken' \
+    -H 'x-key: abcBolinhasKey'
 
-### Verbo PUT - Atualiza
-PUT http://localhost:8000/cliente/1 HTTP/1.1
-content-type: application/json
+### Verbo POST - adicionar
+POST http://localhost:8000/cliente/ HTTP/1.1
+content-type : application/json
+x-token: abcBolinhasToken
+x-key: abcBolinhasKey
 
 {
-  "nome": "Cliente editado",
-  "cpf": "12345678910",
-  "telefone": "49988234567",
-  "compra_fiado": 0,
-  "dia_fiado": 0,
-  "senha": "bolinhas"
+    "nome" : "Arthur Michaltchuk ",
+    "cpf" : "01387897465",
+    "telefone" : "49982345567",
+    "compra_fiado" : 1,
+    "dia_fiado" : 20,
+    "senha" : "abc"
 }
 
-### Verbo DELETE - Excluir
-DELETE http://localhost:8000/cliente/1 HTTP/1.1
+### Verbo PUT - atualiza
+PUT http://127.0.0.1:8000/cliente/1 HTTP/1.1
+content-type : application/json
+x-token: abcBolinhasToken
+x-key: abcBolinhasKey
+
+{
+    "nome" : "Renata da Silva",
+    "cpf" : "01387897465",
+    "telefone" : "49982345567",
+    "compra_fiado" : false,
+    "dia_fiado" : 20,
+    "senha" : "abcBolinhas"
+}
+
+### Verbo DELETE 
+DELETE  http://127.0.0.1:8000/cliente/1 HTTP/1.1
+content-type : application/json
+x-token: abcBolinhasToken
+x-key: abcBolinhasKey

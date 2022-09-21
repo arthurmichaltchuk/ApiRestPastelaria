@@ -1,11 +1,10 @@
 import db
 from sqlalchemy import Column, VARCHAR, CHAR, Integer
 
-# ^ Importando database
-
+# ORM
 
 class FuncionarioDB(db.Base):
-    __tablename__ = 'tb_funcionario'  # Nome da tabela
+    __tablename__ = 'tb_funcionario'
 
     id_funcionario = Column(Integer, primary_key=True,
                             autoincrement=True, index=True)
@@ -15,6 +14,7 @@ class FuncionarioDB(db.Base):
     telefone = Column(CHAR(11), nullable=False)
     grupo = Column(Integer, nullable=False)
     senha = Column(VARCHAR(200), nullable=False)
+
 
     def __init__(self, id_funcionario, nome, matricula, cpf, telefone, grupo, senha):
         self.id_funcionario = id_funcionario
