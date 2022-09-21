@@ -1,0 +1,27 @@
+###
+POST http://localhost:8000/produto/ HTTP/1.1
+content-type: application/json
+
+{
+  "nome": "Pastel",
+  "descricao": "De frango",
+  "foto": "",
+  "valor_unitario": 5.50
+}
+
+###
+GET http://localhost:8000/produto/ HTTP/1.1
+
+###
+PUT http://localhost:8000/produto/1 HTTP/1.1
+content-type: application/json
+
+{
+  "nome": "Pastel",
+  "descricao": "De carne",
+  "foto": "",
+  "valor_unitario": 7.50
+}
+
+###
+DELETE http://localhost:8000/produto/1 HTTP/1.1

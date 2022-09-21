@@ -1,0 +1,32 @@
+### Verbo POST - Adicionar
+POST http://localhost:8000/cliente/ HTTP/1.1
+content-type: application/json
+
+{
+  "nome": "Cliente",
+  "cpf": "12345678910",
+  "telefone": "49988234567",
+  "compra_fiado": 1,
+  "dia_fiado": 16,
+  "senha": "abcbolinhas"
+}
+
+### Verbo GET - Listar
+GET http://localhost:8000/cliente/ HTTP/1.1
+
+
+### Verbo PUT - Atualiza
+PUT http://localhost:8000/cliente/1 HTTP/1.1
+content-type: application/json
+
+{
+  "nome": "Cliente editado",
+  "cpf": "12345678910",
+  "telefone": "49988234567",
+  "compra_fiado": 0,
+  "dia_fiado": 0,
+  "senha": "bolinhas"
+}
+
+### Verbo DELETE - Excluir
+DELETE http://localhost:8000/cliente/1 HTTP/1.1
