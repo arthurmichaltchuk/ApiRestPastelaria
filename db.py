@@ -6,6 +6,7 @@ STR_DATABASE = "sqlite:///pastelaria_db.db"
 engine = create_engine(STR_DATABASE, future=True)
 # , echo=True
 Session = sessionmaker(bind=engine, future=True)
+ 
 
 # para trabalhar com modelos/tabelas
 Base = declarative_base()
