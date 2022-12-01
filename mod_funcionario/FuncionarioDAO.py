@@ -108,3 +108,17 @@ def delete_funcionario(id: int):
         return {"msg": "Erro ao excluir", "erro": str(e)}, 406
     finally:
         session.close()
+
+@router.post("/login/", tags=["funcionario"])
+def validar_login(cpf: str, senha: str):
+    print(cpf)
+    print(senha)
+    session = db.Session()
+
+    result = session.query(FuncionarioDB).filter((FuncionarioDB.cpf == cpf)).filter(FuncionarioDB.senha == senha).first()
+    print(result)
+
+    if result != None:
+        return 1, result, 200
+    else:
+        return 0, 200
