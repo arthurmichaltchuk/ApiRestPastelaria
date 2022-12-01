@@ -19,10 +19,10 @@ x-key: abcBolinhasKey
 {
     "nome" : "Arthur Michaltchuk",
     "matricula" : "123",
-    "cpf" : "01271559960",
+    "cpf" : "1234",
     "telefone" : "49988234567",
     "grupo" : 1,
-    "senha" : "bolinhas1"
+    "senha" : "cd3333f0c034749ceead5de4d14aff9b1d18f2d4e6f3ac3fc3f81b84b5f8a24b"
 }
 
 ### Verbo PUT - atualiza
